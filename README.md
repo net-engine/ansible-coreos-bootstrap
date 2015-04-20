@@ -5,7 +5,7 @@ In order to effectively run ansible, the target machine needs to have a python i
 # install
 
 ```
-ansible-galaxy install defunctzombie.coreos-bootstrap
+ansible-galaxy install netengine.coreos-bootstrap -p ./roles
 ```
 
 # Configure your project
@@ -31,7 +31,7 @@ Now you can simply add the following to your playbook file and include it in you
 - hosts: coreos
   gather_facts: False
   roles:
-    - defunctzombie.coreos-bootstrap
+    - netengine.coreos-bootstrap
 ```
 
 Make sure that `gather_facts` is set to false, otherwise ansible will try to first gather system facts using python which is not yet installed!
